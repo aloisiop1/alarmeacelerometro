@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tela"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="#fafafa"
+        app:layout_constraintBottom_toTopOf="@+id/botaoArme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/status_desarme" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/botaoArme"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:tooltipText="ARME"
+        app:layout_constraintBottom_toBottomOf="@id/tela"
+        app:layout_constraintEnd_toEndOf="@id/tela"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@id/tela"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/botao_arme" />
+
+    <ImageButton
+        android:id="@+id/botaoDesarme"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:tooltipText="DESARME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tela"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="@id/tela"
+        app:layout_constraintTop_toBottomOf="@+id/tela"
+        app:srcCompat="@drawable/botao_desarme" />
+
+    <TextView
+        android:id="@+id/coordenadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="0,0,0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>
